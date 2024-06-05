@@ -1,0 +1,12 @@
+services:
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+
+  adminer:
+    image: adminer:4
+    restart: always
+    ports:
+      - "1111:8080"
